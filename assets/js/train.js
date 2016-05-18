@@ -17,6 +17,16 @@ $("#trainSubmit").on("click", function () {
 	var Time = moment($("#train-time").val().trim(), "HH:mm").format("HH:mm");
 	var Freq = $("#train-freq").val().trim();  
     
+    // Code for the push
+	dataRef.push({
+		name: name,
+		dest: dest,
+		time: time,
+		freq: freq,
+		dateAdded: Firebase.ServerValue.TIMESTAMP
+    });
+
+	// Don't refresh the page!
+	return false;
     
-    
-}
+});
