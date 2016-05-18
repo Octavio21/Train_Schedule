@@ -2,6 +2,7 @@
 var url ='https://tskedule.firebaseio.com/'
 var dataRef = new Firebase(url);
 
+// function to add and define time properly
 function addTime(time, freq){
 	var hour = parseInt(time.split(':')[0]);
 	var minutes = parseInt(time.split(':')[1]);
@@ -15,7 +16,7 @@ function addTime(time, freq){
 }
 
 
-
+// function to do logic for arrival time and minutes away
 function diffTime(time){
 	var hour = parseInt(time.split(':')[0]);
 	var minutes = parseInt(time.split(':')[1]);
@@ -60,17 +61,16 @@ $("#trainSubmit").on("click", function () {
     });
 
    
-    
-// check if inputs working
-// console.log(dataRef.name);
-// console.log(dataRef.dest);
-// console.log(dataRef.time);
-// console.log(dataRef.freq);
-
-	// Don't refresh the page!
+    // clears all input fields
+	$("#train-name").val("");
+	$("#train-dest").val("");
+	$("#train-time").val("");
+	$("#train-freq").val("");
 	return false;
     
 });
+
+alert("Your Train has been added");
 
 dataRef.on("child_added", function (childSnapshot, prevChildKey) {
 
