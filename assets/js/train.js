@@ -66,11 +66,15 @@ $("#trainSubmit").on("click", function () {
 	$("#train-dest").val("");
 	$("#train-time").val("");
 	$("#train-freq").val("");
+	
+// alerst train has been added
+alert("Your Train has been added");
+
+
 	return false;
     
 });
 
-alert("Your Train has been added");
 
 dataRef.on("child_added", function (childSnapshot, prevChildKey) {
 
