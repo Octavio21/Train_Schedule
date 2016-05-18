@@ -1,5 +1,5 @@
 // Local Firebase server
-var url ='https://recentusernames.firebaseio.com/'
+var url ='https://tskedule.firebaseio.com/'
 var dataRef = new Firebase(url);
 
 
@@ -15,10 +15,10 @@ $("#trainSubmit").on("click", function () {
     
 	// Code for the push
 	dataRef.push({
-		name: name,
-		email: email,
-		age: age,
-		comment: comment,
+		name: Name,
+		dest: Dest,
+		time: Time,
+		Freq: Freq,
 		dateAdded: Firebase.ServerValue.TIMESTAMP
         
     });
@@ -29,7 +29,7 @@ $("#trainSubmit").on("click", function () {
 console.log(name);
 console.log(dest);
 console.log(time);
-console.log(nfreq);
+console.log(freq);
 
 	// Don't refresh the page!
 	return false;
