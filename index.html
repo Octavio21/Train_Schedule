@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<title>Train Schedule</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/cerulean/bootstrap.min.css" <link rel="stylesheet" type="text/css"
+		href="assets/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
@@ -12,9 +13,82 @@
 
 <body>
 
+	<div class="row">
+	<div class="col-lg-12 col-md-12 col-sm-12">
+		<div class="jumbotron">
+			<h1>Grand Central Train Schedule</h1>
+		</div>
+	</div>
+</div>
 
-visual studios
+<div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Current Train Schedule</div>
+                <div class="panel-body">
+                    <table class="table table-striped table-hover" id='trainList'>
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (Min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--Administrator input goes here-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="panel panel-default">
+        <div class="panel-body">
+            <strong><h1>Add a Train</h1></strong>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label" for="trainName">Train Name</label>
+                        <input type="text" class="form-control" id="train-name">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label" for="trainDest">Destination</label>
+                        <input type="text" class="form-control" id="train-dest">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label" for="trainTime">First Train Time (HH:mm - Military Time)</label>
+                        <input type="text" class="form-control" id="train-time">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label" for="trainFreq">Frequency (min)</label>
+                        <input type="text" class="form-control" id="train-freq">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <br>
+                    <form id="trainButton">
+                        <!--button allows administrators to submit train info-->
+                        <button id="trainSubmit" type="submit" class="btn btn-default btn-lg btn-block">Submit Train Information</button>
+                    </form>
 
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<script src="assets/js/app.js"></script>
 </body>
